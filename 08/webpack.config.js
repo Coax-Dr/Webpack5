@@ -15,7 +15,8 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              importLoaders: 1,
+              esModule: false
             }
           },
           'postcss-loader'
@@ -23,11 +24,17 @@ module.exports = {
       },
       {
         test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader']
+      },
+      {
+        test: /\.(png|svg|gif|jpg|jpe?g)$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader',
-          'less-loader'
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false, // 是否转化为esModule
+            }
+          }
         ]
       }
     ]
