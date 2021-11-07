@@ -12,7 +12,7 @@ function packImg() {
    * 如果不使用webpack5进行esModule属性进行配置，同时又不愿意使用default
    * 我们可以使用esModule的导入规范。import imgSrc from '../img/01.jpg'
    */
-  img.src = require('../img/01.jpg');
+  img.src = require('../img/bg.jpg');
   ele.appendChild(img);
 
   // 给元素设置背景图片
