@@ -91,7 +91,7 @@ oImg.src = imgSrc; // 可以正常使用
   type: 'asset/inline'
 }
 ```
-## asset --> file-loader/url-loader
+## asset --> file-loader/url-loader 也可以用于对图标字体文件的打包
 ```
 {
   test: /\.(png|svg|gif|jpe?g)$/,

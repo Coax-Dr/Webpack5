@@ -87,6 +87,14 @@ module.exports = {
             // 配置asset/inline解析资源的最大体积，大于这个体积就使用asset/resource打包
           }
         }
+      },
+      {
+        test: /\.(ttf|woff2?)$/,
+        // 对图标字体文件进行打包
+        type: 'asset/resource',
+        generator: {
+          filename: 'font/[name].[hash:6][ext]'
+        }
       }
     ]
   }

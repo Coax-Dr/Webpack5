@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "18267910",
+      "name": "查验",
+      "font_class": "chayan",
+      "unicode": "e98c",
+      "unicode_decimal": 59788
+    },
+    {
+      "icon_id": "18267919",
+      "name": "工厂",
+      "font_class": "gongchang",
+      "unicode": "e98e",
+      "unicode_decimal": 59790
+    },
+    {
+      "icon_id": "18267920",
+      "name": "合同",
+      "font_class": "hetong",
+      "unicode": "e98f",
+      "unicode_decimal": 59791
+    },
+    {
+      "icon_id": "18267921",
+      "name": "海关港口",
+      "font_class": "haiguangangkou",
+      "unicode": "e990",
+      "unicode_decimal": 59792
+    },
+    {
+      "icon_id": "18267930",
+      "name": "开放",
+      "font_class": "kaifang",
+      "unicode": "e991",
+      "unicode_decimal": 59793
+    }
+  ]
+}
