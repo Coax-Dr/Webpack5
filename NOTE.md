@@ -106,3 +106,18 @@ oImg.src = imgSrc; // 可以正常使用
   }
 }
 ```
+
+# loader与plugin的特点与区别：
+## loader 对特定的模块类型进行转换
+> 特定模块：字体、图标、图片等等webpack无法识别的文件类型
+## plugin 在整个webpack打包周期中进行更多的工作
+> 更多工作：比如压缩文件
+
+
+# plugin 插件
+## 外部
+### clean-webpack-plugin 清除打包目录
+### html-webpack-plugin 自动创建一个html文件作为模板html
+
+## webpack自带插件
+### DefinePlugin 对自定义html模板中的常量进行赋值

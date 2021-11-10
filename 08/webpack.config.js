@@ -1,4 +1,7 @@
 const path = require('path');
+const { DefinePlugin } = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -97,5 +100,23 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new CleanWebpackPlugin(),
+    // CleanWebpackPlugin 自动清除打包目录
+    new HtmlWebpackPlugin({
+      title: 'Webpack5',
+      template: path.resolve(__dirname, './public/index.html')
+      // 配置html模板的路径
+      // html-webpack-plugin插件默认会生成一个模板
+      // 但是由于大多数情况下，页面都是在特定的模板下搭建的
+      // 所以template可以配置开发者自己想要的模板
+      // html-webpack-plugin会用<script></script>将boundle.js文件插入自定义的模板
+    }),
+    new DefinePlugin({
+      BASE_URL: '"./"'
+      // 在自定义的html模板中有一个BASE_URL常量
+    })
+    // DefinePlugin 对自定义的html模板中的常量进行赋值
+  ]
 }
