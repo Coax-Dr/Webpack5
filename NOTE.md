@@ -121,3 +121,19 @@ oImg.src = imgSrc; // 可以正常使用
 
 ## webpack自带插件
 ### DefinePlugin 对自定义html模板中的常量进行赋值
+
+
+
+
+# babel 处理js在不同浏览器平台的兼容问题
+
+## @babel/core babel核心库 babel-core仅仅只是一个平台，仅仅只有babel-core不能进行任何工作，还需要配合其他的包
+> @babel/plugin-transform-arrow-functions 对箭头函数进行转化的插件
+npx babel src --out-dir build --plugins=@babel/plugin-transform-arrow-functions
+> @babel/plugin-transform-block-scoping 将const\let转化为var
+> @babel/preset-env babel的预设
+> 注意：在babel的预设(@babel/preset-env)已经存在大部分的设置包含以上的插件
+## @babel/cli babel命令行工具
+npx babel src --out-dir build
+
+## babel-loader
