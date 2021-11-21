@@ -125,7 +125,7 @@ oImg.src = imgSrc; // 可以正常使用
 
 
 
-# babel 处理js在不同浏览器平台的兼容问题
+# babel 处理js在不同浏览器平台的兼容问题，例如将JSX TS ES6+ 转化为浏览器可以识别的js.
 
 ## @babel/core babel核心库 babel-core仅仅只是一个平台，仅仅只有babel-core不能进行任何工作，还需要配合其他的包
 > @babel/plugin-transform-arrow-functions 对箭头函数进行转化的插件
@@ -137,3 +137,18 @@ npx babel src --out-dir build --plugins=@babel/plugin-transform-arrow-functions
 npx babel src --out-dir build
 
 ## babel-loader
+```
+{
+  test: /\.js$/,
+  use: [{
+    loader: 'babel-loader',
+    options: {
+      presets: ['@babel/preset-env']
+    }
+  }]
+}
+```
+### babel-loader配置文件
+> .babelrc
+> babel.config.js
+> 注意.browserslistrc 文件不仅仅可以针对css对浏览器进行兼容，还可以针对js对浏览器进行兼容。
