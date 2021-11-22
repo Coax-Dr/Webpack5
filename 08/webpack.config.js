@@ -102,16 +102,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        use: [{
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-            // plugins: [
-            //   '@babel/plugin-transform-arrow-functions',
-            //   '@babel/plugin-transform-block-scoping'
-            // ]
-          }
-        }]
+        use: ['babel-loader']
       }
     ]
   },
