@@ -159,3 +159,5 @@ npx babel src --out-dir build
 > .babelrc
 > babel.config.js
 > 注意.browserslistrc 文件不仅仅可以针对css对浏览器进行兼容，还可以针对js对浏览器进行兼容。
+
+## polyfill

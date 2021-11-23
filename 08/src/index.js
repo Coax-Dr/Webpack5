@@ -1,6 +1,5 @@
-const title = '前端';
-const foo = () => {
-  console.log("标题：", title);
-}
+const p = new Promise((resolve, reject) => {
+  console.log("promise");
+})
 
 // foo();
