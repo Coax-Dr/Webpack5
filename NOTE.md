@@ -161,3 +161,16 @@ npx babel src --out-dir build
 > 注意.browserslistrc 文件不仅仅可以针对css对浏览器进行兼容，还可以针对js对浏览器进行兼容。
 
 ## polyfill
+
+# 开发环境配置
+## webpack-dev-server 为你提供一个基本的web server
+> 配置：webpack-dev-server不需要安装，webpack自带
+```
+devServer: {
+  static: "./dist" // 告诉webpack从哪开始监听
+}
+
+// package.json
+"dev": "webpack server --open"
+```
+## webpack-middle-ware 作为一个封装器将webpack打包后的文件发送到自己在本地构建的服务器上(这个服务区基于express.js)，相当于前端资源被部署到服务器，这样我们就可以相访问网站一样，在服务器上访问自己的项目。

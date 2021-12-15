@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'boundle.js',
     path: path.resolve(__dirname, './dist'),
+    publicPath: "/" // 项目的入口访问地址
     // assetModuleFilename: 'img/[name].[hash:6][ext]'
     // 配置asset module处理后的资源的存放路径
   },
@@ -106,6 +107,10 @@ module.exports = {
         use: ['babel-loader']
       }
     ]
+  },
+  devServer: {
+    static: "./dist",
+    hot: true
   },
   plugins: [
     new CleanWebpackPlugin(),

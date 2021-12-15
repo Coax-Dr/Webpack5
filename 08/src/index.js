@@ -3,3 +3,4 @@ const p = new Promise((resolve, reject) => {
 })
 
 // foo();
+console.log("12")
