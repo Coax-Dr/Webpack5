@@ -1,11 +1,11 @@
 const path = require('path');
-const { DefinePlugin } = require('webpack');
+const { DefinePlugin, HotModuleReplacementPlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js',
+  entry: ['webpack-hot-middleware/client?noInfo=true&reload=true','./src/index.js'],
   output: {
     filename: 'boundle.js',
     path: path.resolve(__dirname, './dist'),
@@ -109,7 +109,6 @@ module.exports = {
     ]
   },
   devServer: {
-    static: "./dist",
     hot: true
   },
   plugins: [
@@ -127,7 +126,8 @@ module.exports = {
     new DefinePlugin({
       BASE_URL: '"./"'
       // 在自定义的html模板中有一个BASE_URL常量
-    })
+    }),
     // DefinePlugin 对自定义的html模板中的常量进行赋值
+    new HotModuleReplacementPlugin()
   ]
 }
