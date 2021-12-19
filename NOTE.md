@@ -174,3 +174,8 @@ devServer: {
 "dev": "webpack server --open"
 ```
 ## webpack-middle-ware 作为一个封装器将webpack打包后的文件发送到自己在本地构建的服务器上(这个服务区基于express.js)，相当于前端资源被部署到服务器，这样我们就可以相访问网站一样，在服务器上访问自己的项目。
+
+
+## 模块热替换 (HMR) 两种主要的方式
+> webpack-dev-server
+> webpack-hot-middleware 如果使用webpack-middle-ware将代码发送到本地服务器来搭建本地开发环境，可以使用webpack-hot-middleware进行模块的热替换
