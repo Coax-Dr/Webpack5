@@ -178,4 +178,11 @@ devServer: {
 
 ## 模块热替换 (HMR) 两种主要的方式
 > webpack-dev-server
+```
+{
+  hot: true
+}
+```
 > webpack-hot-middleware 如果使用webpack-middle-ware将代码发送到本地服务器来搭建本地开发环境，可以使用webpack-hot-middleware进行模块的热替换
+
+> react组件的热更新 主要使用到@pmmmwwh/react-refresh-webpack-plugin与react-refresh

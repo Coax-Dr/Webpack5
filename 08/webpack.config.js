@@ -2,6 +2,7 @@ const path = require('path');
 const { DefinePlugin, HotModuleReplacementPlugin } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ReactFefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -105,6 +106,9 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },{
+        test: /\.jsx$/,
+        use: ['babel-loader']
       }
     ]
   },
@@ -128,6 +132,7 @@ module.exports = {
       // 在自定义的html模板中有一个BASE_URL常量
     }),
     // DefinePlugin 对自定义的html模板中的常量进行赋值
-    new HotModuleReplacementPlugin()
+    new HotModuleReplacementPlugin(),
+    new ReactFefreshWebpackPlugin()
   ]
 }

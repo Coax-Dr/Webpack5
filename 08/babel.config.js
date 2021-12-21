@@ -7,6 +7,10 @@ module.exports = {
         // 取值：usage false entry
         corejs: 3
       }
-    ]
+    ],
+    ['@babel/preset-react'],
+  ],
+  plugins: [
+    ["react-refresh/babel"]
   ]
 }
